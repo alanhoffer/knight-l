@@ -11,8 +11,17 @@ config_version=5
 [application]
 
 config/name="KnightL"
+run/main_scene="res://scenes/ui/main_menu.tscn"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+ApiConfig="*res://config/api_config.gd"
+SceneManager="*res://src/utils/scene_manager.gd"
+APIClient="*res://src/network/api_client.gd"
+AuthManager="*res://src/network/auth_manager.gd"
+GameState="*res://src/systems/game_state.gd"
 
 [rendering]
 

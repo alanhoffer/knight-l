@@ -1,3 +1,13 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Python / Backend
+backend/venv/
+backend/.env
+backend/ironclash.db
+__pycache__/
+*.py[cod]
+*.egg-info/
+backend/.pytest_cache/
+.mypy_cache/

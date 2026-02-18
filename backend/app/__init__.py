@@ -1,0 +1,1 @@
+"""IronClash Backend - Clean Architecture."""

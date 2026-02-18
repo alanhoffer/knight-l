@@ -1,6 +1,33 @@
 # IronClash - Tareas para HacknPlan
 
+---
+
+## Resumen de duración del proyecto
+
+| Métrica | Valor |
+|--------|--------|
+| **Duración por sprint** | **2 semanas** (80 h por desarrollador por sprint) |
+| **Sprints totales** | 21 |
+| **Horas totales estimadas** | ~1 130 h (suma de tareas) |
+| **Tiempo total (1 dev, 40 h/semana)** | ~28–30 semanas (**~7 meses**) |
+| **Tiempo total (2 devs, front/back en paralelo)** | ~16–20 semanas (**~4–5 meses**) |
+
+El orden de los sprints sigue el **roadmap del GDD**: Fase 1 Core PvE → Fase 2 Progresión → Fase 3 Housing/Tienda/Contenido → Fase 4 PvP y polish → Torneos (fase posterior). Los sprints con menos de 80 h pueden combinarse con el siguiente o usarse como colchón; los que pasan de 80 h pueden dividirse en dos iteraciones o repartirse entre dos personas.
+
+**Orden recomendado de sprints por fase:**
+
+| Fase | Sprints | Contenido |
+|------|---------|-----------|
+| **Fase 1 - Core MVP PvE** | 1 → 2 → 3 → 4 → 5 → 6 | Setup, movimiento, combate, mapas, personajes, equipamiento |
+| **Fase 2 - Progresión** | 7 → 8 → 14 → 19 | Level up, vidas, cofres, pasivas/habilidades de gear |
+| **Fase 3 - Social y contenido** | 9 → 10 → 13 → 17 → 18 | Housing core, housing UI, tienda, expansión mapas/quests, amigos y visitar casas |
+| **Fase 4 - PvP y cierre** | 11 → 12 → 16 → 20 → 21 | Matchmaking PvP, combate PvP, ranking/ligas, polish, testing |
+| **Fase posterior** | 15 | Torneos en vivo |
+
+---
+
 ## Sprint 1: Setup y Fundación (Fase 1 - Core)
+**Duración aproximada:** 2 semanas · **Horas estimadas:** ~52 h
 **Objetivo:** Establecer la base del proyecto y autenticación
 
 ### Backend
@@ -56,6 +83,7 @@
 ---
 
 ## Sprint 2: Movimiento y Controles (Fase 1 - Core)
+**Duración aproximada:** 2 semanas · **Horas estimadas:** ~36 h  
 **Objetivo:** Sistema de movimiento y controles básicos del personaje
 
 ### Frontend
@@ -93,7 +121,8 @@
 ---
 
 ## Sprint 3: Combate Core - Controles Directos (Fase 1 - Core)
-**Objetivo:** Sistema de combate con controles directos del jugador
+**Duración aproximada:** 2 semanas · **Horas estimadas:** ~62 h  
+**Objetivo:** Sistema de combate con controles directos del jugador (PvE; la sincronización PvP va en Sprint 16)
 
 ### Frontend
 - [ ] **Sistema de Ataque con Controles**
@@ -154,19 +183,14 @@
 - [ ] **Validación de Acciones de Combate**
   - Prioridad: Alta
   - Tipo: Feature
-  - Descripción: Validar ataques, dodge, block del cliente, prevenir cheats
+  - Descripción: Validar ataques, dodge, block del cliente, prevenir cheats (PvE; PvP en Sprint 16)
   - Estimación: 10h
-
-- [ ] **Sincronización de Combate PvP**
-  - Prioridad: Alta
-  - Tipo: Feature
-  - Descripción: Sincronizar acciones entre jugadores en tiempo real, lag compensation
-  - Estimación: 12h
 
 ---
 
 ## Sprint 4: Mapas y Exploración (Fase 1 - Core)
-**Objetivo:** Sistema de mapas explorables y navegación
+**Duración aproximada:** 2 semanas · **Horas estimadas:** ~62 h  
+**Objetivo:** Sistema de mapas explorables, enemigos PvE y drops (instancia en solitario, sin minimapa)
 
 ### Backend
 - [ ] **Sistema de Mapas**
@@ -212,11 +236,7 @@
   - Descripción: Items que aparecen en el suelo al derrotar enemigos, recoger items
   - Estimación: 8h
 
-- [ ] **Minimapa**
-  - Prioridad: Media
-  - Tipo: Feature
-  - Descripción: Minimapa en UI, mostrar posición del jugador, puntos de interés
-  - Estimación: 6h
+- [ ] ~~**Minimapa**~~ **No implementar** (GDD: el juego no tendrá minimapa; orientación por diseño de mapa y puntos de interés.)
 
 - [ ] **Sistema de Navegación entre Mapas**
   - Prioridad: Alta
@@ -225,6 +245,7 @@
   - Estimación: 6h
 
 ## Sprint 5: Personajes y Stats (Fase 1 - Core)
+**Duración aproximada:** 2 semanas · **Horas estimadas:** ~40 h  
 **Objetivo:** Sistema de personajes jugables
 
 ### Backend
@@ -268,6 +289,7 @@
 ---
 
 ## Sprint 6: Equipamiento Básico (Fase 1 - Core)
+**Duración aproximada:** 2 semanas · **Horas estimadas:** ~52 h  
 **Objetivo:** Sistema de gear funcional
 
 ### Backend
@@ -317,6 +339,7 @@
 ---
 
 ## Sprint 7: Progresión y Level Up (Fase 2 - Progresión)
+**Duración aproximada:** 2 semanas · **Horas estimadas:** ~34 h  
 **Objetivo:** Sistema de mejoras roguelike
 
 ### Backend
@@ -354,6 +377,7 @@
 ---
 
 ## Sprint 8: Sistema de Vidas (Fase 2 - Progresión)
+**Duración aproximada:** 2 semanas · **Horas estimadas:** ~32 h  
 **Objetivo:** Energía por personaje
 
 ### Backend
@@ -397,6 +421,7 @@
 ---
 
 ## Sprint 9: Housing Core - Grid, Placement y Almacenamiento (Fase 3 - Social)
+**Duración aproximada:** 2–2,5 semanas · **Horas estimadas:** ~90 h (considerar repartir en 2 iteraciones)  
 **Objetivo:** Sistema base de colocación de muebles y almacenamiento de items
 
 ### Backend
@@ -470,6 +495,7 @@
 ---
 
 ## Sprint 10: Housing UI/UX (Fase 3 - Social)
+**Duración aproximada:** 2 semanas · **Horas estimadas:** ~36 h  
 **Objetivo:** Mejorar experiencia de usuario en housing
 
 ### Frontend
@@ -511,8 +537,9 @@
 
 ---
 
-## Sprint 11: PvP en Tiempo Real - Matchmaking (Fase 3 - Social)
-**Objetivo:** Sistema de búsqueda de rivales para PvP en tiempo real
+## Sprint 11: PvP en Tiempo Real - Matchmaking (Fase 4 - PvP)
+**Duración aproximada:** 2 semanas · **Horas estimadas:** ~80 h (incl. sincronización de combate PvP)  
+**Objetivo:** Sistema de búsqueda de rivales y sincronización de combate PvP en tiempo real
 
 ### Backend
 - [ ] **Sistema de Matchmaking PvP**
@@ -545,6 +572,12 @@
   - Descripción: Conexión WebSocket para sincronización de combate PvP, mensajes en tiempo real
   - Estimación: 10h
 
+- [ ] **Sincronización de Combate PvP**
+  - Prioridad: Alta
+  - Tipo: Feature
+  - Descripción: Sincronizar acciones entre jugadores en tiempo real, lag compensation (tras Sprint 3 combate PvE)
+  - Estimación: 12h
+
 ### Frontend
 - [ ] **Pantalla de Búsqueda de Partida**
   - Prioridad: Alta
@@ -566,7 +599,8 @@
 
 ---
 
-## Sprint 12: PvP en Tiempo Real - Combate y Recompensas (Fase 3 - Social)
+## Sprint 12: PvP en Tiempo Real - Combate y Recompensas (Fase 4 - PvP)
+**Duración aproximada:** 2 semanas · **Horas estimadas:** ~40 h  
 **Objetivo:** Completar flujo de PvP en tiempo real
 
 ### Backend
@@ -604,6 +638,7 @@
 ---
 
 ## Sprint 13: Tienda y Economía (Fase 3 - Social)
+**Duración aproximada:** 2 semanas · **Horas estimadas:** ~56 h  
 **Objetivo:** Sistema de compras y monedas
 
 ### Backend
@@ -653,6 +688,7 @@
 ---
 
 ## Sprint 14: Cofres y Loot Boxes (Fase 2 - Progresión)
+**Duración aproximada:** 2 semanas · **Horas estimadas:** ~48 h  
 **Objetivo:** Sistema de recompensas time-gated
 
 ### Backend
@@ -701,7 +737,8 @@
 
 ---
 
-## Sprint 15: Torneos en Vivo (Fase 4 - Live)
+## Sprint 15: Torneos en Vivo (Fase posterior - después del MVP)
+**Duración aproximada:** 2 semanas · **Horas estimadas:** ~78 h  
 **Objetivo:** Sistema de torneos con WebSockets
 
 ### Backend
@@ -756,7 +793,8 @@
 
 ---
 
-## Sprint 16: Ranking y Ligas (Fase 4 - Live)
+## Sprint 16: Ranking y Ligas (Fase 4 - PvP)
+**Duración aproximada:** 2 semanas · **Horas estimadas:** ~46 h  
 **Objetivo:** Sistema competitivo completo
 
 ### Backend
@@ -799,8 +837,9 @@
 
 ---
 
-## Sprint 17: Expansión de Mapas y Farmeo (Fase 1 - Core)
-**Objetivo:** Más contenido de mapas y mejoras en farmeo
+## Sprint 17: Expansión de Mapas y Farmeo (Fase 3 - Contenido)
+**Duración aproximada:** 2 semanas · **Horas estimadas:** ~48 h  
+**Objetivo:** Más contenido de mapas, quests y mejoras en farmeo
 
 ### Backend
 - [ ] **Sistema de Múltiples Mapas**
@@ -842,8 +881,9 @@
 
 ---
 
-## Sprint 18: Social - Visitar Casas (Fase 3 - Social)
-**Objetivo:** Funcionalidad social básica
+## Sprint 18: Social - Amigos y Visitar Casas (Fase 3 - Social)
+**Duración aproximada:** 2 semanas · **Horas estimadas:** ~28 h  
+**Objetivo:** Funcionalidad social básica (amigos, visitar casas)
 
 ### Backend
 - [ ] **API de Visitas**
@@ -874,6 +914,7 @@
 ---
 
 ## Sprint 19: Pasivas de Arma y Habilidades (Fase 2 - Progresión)
+**Duración aproximada:** 2 semanas · **Horas estimadas:** ~26 h  
 **Objetivo:** Efectos especiales de gear
 
 ### Backend
@@ -899,6 +940,7 @@
 ---
 
 ## Sprint 20: Polish y Optimización (Fase 4 - Live)
+**Duración aproximada:** 2 semanas · **Horas estimadas:** ~54 h  
 **Objetivo:** Mejoras de UX y rendimiento
 
 ### Backend
@@ -948,6 +990,7 @@
 ---
 
 ## Sprint 21: Testing y Bug Fixes
+**Duración aproximada:** 2 semanas · **Horas estimadas:** ~34 h (+ tiempo variable para bugs)  
 **Objetivo:** Estabilidad y calidad
 
 ### General
